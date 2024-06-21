@@ -1,0 +1,294 @@
+@import url(https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script); 
+
+@font-face {
+    font-family: "Clicker Script";
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot");
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.svg#Clicker Script")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/21d1ef740083511bfa90bcc92c819293?family=Poppins+Thin); 
+
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/92c6ef0497cd59fd2a730425f318f504?family=Street+Corner+SemiBold); 
+
+@font-face {
+    font-family: "Street Corner SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot");
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.svg#Street Corner SemiBold")format("svg");
+}
+
+body,*{
+    margin: 0;
+    padding: 0;
+}
+.dashboard{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.side_nav{
+    background-color: black;
+    width: 11.5%;
+    height: 100vh;
+    box-shadow: 1px 1px 5px black;
+}
+.logo{
+    display: flex;
+    margin-top: 8.5%;
+    padding-left: 18%;
+}
+.logo_title p{
+    padding-top: 9%;
+    font-family: "Clicker Script";
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+.menu{
+    color: white;
+    margin-top: 18.5%;
+    font-family: "Poppins Thin";
+    padding-left: 21%;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+.home{
+    
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 15%;
+    padding-left: 19%;
+}
+.home_title p{
+    padding-left: 13%;
+    font-family: "Street Corner SemiBold";
+    padding-top: 3.5%;
+    color: aliceblue;
+}
+.dine_img{
+    width: fit-content;
+    height: 40%;
+}
+.dine_img img{
+    height: 40%;
+}
+.dine_title p{
+    color: aliceblue;
+    font-family: "Street Corner SemiBold";
+    padding-left: 30%;
+    padding-top: 7.5%;
+}
+.receipt_title p{
+    padding-left: 30%;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    padding-top: 5%;
+
+}
+.hr1{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+}
+.profile p{
+    color: white;
+    padding-top: 10%;
+    padding-left: 23%;
+    font-family: "Poppins Thin";
+    font-size: 18px;
+    letter-spacing: 1.4px;
+}
+.hr2{
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+}
+.profile_title p{
+    padding-left: 25%;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    padding-top: 8%;
+}
+.username{
+    display: flex;
+    padding-top: 1%;
+    padding-left: 3.5%;
+    padding-bottom: 1%;
+    width: 92.4%;
+    padding-right: 3.8%;
+    color: white;
+    background-color: black;
+    border-bottom: 1px dotted white;
+}
+.name{
+    padding-top: 5%;
+    padding-left: 3%;
+    padding-right: 7%;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-family: "Street Corner SemiBold";
+}
+.the_rest{
+    width: 100%;
+    background-color: white;
+}
+.nm{
+    display: flex;
+    background-color: white;
+    color: black;
+    width: 280%;
+    padding: 2%;
+    border-radius: 22px;
+    padding-right: 25%;
+    padding-left: 15%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+.arrow_down{
+    width: 125%;
+}
+.top_menu_image h3{
+    font-family: "Street Corner SemiBold";
+    font-size: 80px;
+    font-weight: 100;
+    position: relative;
+    padding-top: -50%;
+}
+.top_menu_image{
+    background-color: black;
+    height: 410px;
+    text-align: center;
+    color: aliceblue;
+    font-family: "Street Corner SemiBold";
+}
+.menulogos{
+    width: 280px;
+    padding-top: 1%;
+}
+.log_titl{
+    position: absolute;
+    margin-top: -230px;
+    margin-left: 675px;
+}
+.room_items{
+    padding-top: .5%;
+    padding-bottom: .5%;
+    font-family: "Street Corner SemiBold";
+    background-color: black;
+    margin-top: .3%;
+    text-align: center;
+    color: aliceblue;
+}
+.apph1 h1{
+    font-family: "Street Corner SemiBold";
+}
+.apph1{
+    text-align: center;
+    padding-top: 1.5%;
+    font-weight: 100;
+}
+.menu_ruler{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    border: 1px dotted black;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.food_heading h2{
+    font-family: "Street Corner SemiBold";
+    padding-top: 1.5%;
+    padding-left: 15%;
+}
+.orderp{
+    display: flex;
+}
+.ingredients p{
+    font-family: "Street Corner SemiBold";
+    padding-left: 30%;
+}
+.conts{
+    display: flex;
+}
+.ingredients{
+    width: 50%;
+}
+.price p{
+    font-size: 15px;
+    padding-left: 15%;
+    font-family: "Street Corner SemiBold";
+}
+.orderp{
+    width: 50%;
+}
+.price{
+    padding-left: 30%;
+    width: 20%;
+}
+.ord{
+    border-radius: 11px;
+    padding: 12%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    box-shadow: 1px 1px 1px black;
+}
+.conts{
+    margin-bottom: 2%;
+    margin-right: 5%;
+    height: 250px;
+    padding-top: 3%;
+   
+}
+
+.ingredients{
+    width: 80%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.roominage{
+    border-radius: 12px;
+    margin-left: 30%;
+    height: 120px;
+    border-radius: 22px;
+}
+.log_titl h3{
+    padding-left: 15%;
+}
+.the_rest{
+    overflow: auto;
+    height: 100vh;
+}
+.orderp{
+    text-decoration: none;
+    margin-left: 63.5%;
+    margin-top: 1%;
+}
+.ord{
+    padding: 23%;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+}

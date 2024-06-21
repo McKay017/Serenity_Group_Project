@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/adminmenu.css' %}">
+
+    <title>Admin</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'home' %}"><p>Dashboard</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/dine.png' %}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <a href="{% url 'addfoodmenu' %}"><p>Menu</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/room.png' %}" alt="room_reservation" class="room_reservation_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'addroomadmin' %}"><p>Rooms</p></a>
+
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/websit.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'landingpage' %}"><p>Website</p></a>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="profile">
+                <p>Records</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <a href="{% url 'adminmemberspage' %}"><p>Members</p></a>
+                </div>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <a href="{% url 'adminwaiterspage' %}"><p>Waiters</p></a>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="homel">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'member_logout' %}">
+                        <p>Logout</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="app">
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi, {{request.user}} </h3>  
+            </div>
+            <div class="therest">
+                <h1>Food Menu</h1>
+            </div>
+        </div>
+        <div class="men">
+            <div class="startt">
+                <div class="imgt">
+                    <img src="{% static 'images/add.png' %}" alt="add">
+                </div>
+                <div class="text_acc">
+                    <a href="{% url 'upload_image' %}"><p>Add images</p></a>
+                </div>
+            </div>
+            <div class="startt">
+                <div class="imgt">
+                    <img src="{% static 'images/add.png' %}" alt="add">
+                </div>
+                <div class="text_acc">
+                    <a href="{% url 'menu_category' %}"><p>Add category</p></a>
+                </div>
+            </div>
+            <div class="startt">
+                <div class="imgt">
+                    <img src="{% static 'images/add.png' %}" alt="add">
+                </div>
+                <div class="text_acc">
+                    <a href="{% url 'create_product' %}"><p>Add food item</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="menu_items_record">
+            
+            <div class="menu_items">
+                {% for category in categories %}
+                    <div class="category">
+                        <h2 class="category-header">{{ category.name }}</h2>
+                        <table class="category-table">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Description</th>
+                                    <th>Buttons</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                         
+                                {% for product in category.product_set.all %}
+                                    <tr>
+                                        <td>{{ product.name }}</td>
+                                        <td>{{ product.price }}</td>
+                                        <td>{{ product.contents }}</td>
+                                        <td><a href="{% url 'edit_product' product.id %}" class="btn btn-warning"><button>Edit</button></a></td>
+                                        <td><a href="{% url 'delete_product' product.id %}" class="btn btn-danger"><button>Delete</button></a></td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer">
+            <div class="copy">
+                <p>Copyrights@2024</p>
+            </div>
+            <div class="policy">
+                <p>Privacy policy</p>
+            </div>
+        </div>
+    </div>
+   
+   
+    </div>
+</body>
+</html>

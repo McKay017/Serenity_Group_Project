@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ Chatbot</title>
+</head>
+<body>
+    <h1>FAQ Chatbot</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ask</button>
+    </form>
+    {% if response %}
+        <h2>Answer:</h2>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>

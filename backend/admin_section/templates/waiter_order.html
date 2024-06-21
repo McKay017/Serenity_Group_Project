@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/leaderboard.css' %}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <p>Dashboard</p>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/leader.png' %}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <p>Leaderboard</p>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/order.png' %}" alt="room_reservation" class="room_reservation_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <p class="or">Order</p>
+                </div>
+            </div>
+
+            
+            <hr class="hr1">
+            <div class="profile">
+                <p>Profile</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <p>Profile</p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <p>Logout</p>
+                </div>
+            </div>
+        </div>
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi , {{request.user}} </h3>
+                
+            </div>
+            <div class="allmdia">
+                <div class="appetizers">
+                    <h1 class="fm">Food Menu</h1>
+                    {% for category in categories %}
+                    <div class="apph1">
+                        <h1>{{ category.name }}</h1>
+                    </div>
+                    <hr class="menu_ruler">
+                    {% for product in category.product_set.all %}
+                    <div class="menu_food_list">
+                        <div class="food_heading">
+                            <h2>{{ product.name }}</h2>
+                            <div class="conts">
+                                <div class="ingredients">
+                                    <p> {{ product.contents }}</p>
+                                </div>
+                                <div class="orderp">
+                                    <div class="price">
+                                        <p>Ksh {{ product.price }}</p>
+                                    </div>
+                                    <div class="order">
+                                        <a href="{% url 'add_to_cart' product.id %}"><button class="ord">Order</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                    {% endfor %}
+                    <hr class="menu_ruler">
+    
+                </div>
+            </div>
+          
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

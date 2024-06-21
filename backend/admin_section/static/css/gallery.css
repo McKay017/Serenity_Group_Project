@@ -1,0 +1,178 @@
+@import url(https://db.onlinewebfonts.com/c/c0152cb744b60409569eeee46b8897f3?family=Euclid); 
+@import url(https://db.onlinewebfonts.com/c/533966a0ad055c8e5a1f184055560c15?family=Collega); 
+
+@import url(https://db.onlinewebfonts.com/c/0ab0ae4f00bc5759060ffb644ce6c66f?family=Am+Sans); 
+
+@font-face {
+    font-family: "Am Sans";
+    src: url("https://db.onlinewebfonts.com/t/0ab0ae4f00bc5759060ffb644ce6c66f.eot");
+    src: url("https://db.onlinewebfonts.com/t/0ab0ae4f00bc5759060ffb644ce6c66f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0ab0ae4f00bc5759060ffb644ce6c66f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0ab0ae4f00bc5759060ffb644ce6c66f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/0ab0ae4f00bc5759060ffb644ce6c66f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0ab0ae4f00bc5759060ffb644ce6c66f.svg#Am Sans")format("svg");
+}
+
+@font-face {
+    font-family: "Collega";
+    src: url("https://db.onlinewebfonts.com/t/533966a0ad055c8e5a1f184055560c15.eot");
+    src: url("https://db.onlinewebfonts.com/t/533966a0ad055c8e5a1f184055560c15.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/533966a0ad055c8e5a1f184055560c15.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/533966a0ad055c8e5a1f184055560c15.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/533966a0ad055c8e5a1f184055560c15.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/533966a0ad055c8e5a1f184055560c15.svg#Collega")format("svg");
+}
+
+@font-face {
+    font-family: "Euclid";
+    src: url("https://db.onlinewebfonts.com/t/c0152cb744b60409569eeee46b8897f3.eot");
+    src: url("https://db.onlinewebfonts.com/t/c0152cb744b60409569eeee46b8897f3.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/c0152cb744b60409569eeee46b8897f3.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/c0152cb744b60409569eeee46b8897f3.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/c0152cb744b60409569eeee46b8897f3.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/c0152cb744b60409569eeee46b8897f3.svg#Euclid")format("svg");
+}
+
+body,*{
+    padding: 0;
+    margin: 0%;
+}
+.topbar{
+    background-color: red;
+    display: flex;
+    padding: 1.3%;
+    margin-left: 40%;
+    width: 20%;
+    margin-right: 40%;
+    padding-left: 1.4%;
+    margin-top: .5%;
+    padding-right: 1.4%;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    border-radius: 42px;
+}
+.landingpage{
+    background-size:contain;
+    height: 65px;
+    margin-top: .25%;
+    margin-left: .25%;
+    margin-right: .25%;
+    border-radius: 25px;
+    
+}
+.footer{
+    font-family: "Am Sans";
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.3%;
+    background-color: none;
+}
+.menu-container {
+    position: relative;
+}
+
+#menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust this based on your button size */
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    width: 130px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu ul li:last-child {
+    border-bottom: none;
+}
+.logo{
+    display: flex;
+}
+.logo p{
+    padding-top: 3%;
+}
+.sere{
+    font-family: "Am Sans";
+    font-size: 20px;
+    margin-top: 4.5%;
+    color: white;
+}
+
+
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    overflow: auto;
+    height: 700px;
+    z-index: -10;
+}
+.h h1{
+    padding-left: 20%;
+    padding-top: 2.5%;
+    font-family: "Am Sans";
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

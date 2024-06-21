@@ -1,0 +1,114 @@
+/* Global styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom right, #ece9e6, #ffffff);
+}
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.role {
+    flex: 1;
+    margin: 20px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.role:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.role h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.role p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.login-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #555;
+}
+
+#members {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+}
+
+#admin {
+    background: linear-gradient(135deg, #a8e063, #56ab2f);
+    color: white;
+}
+
+#waiter {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    color: white;
+}
+
+#members .login-button,
+#admin .login-button,
+#waiter .login-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+#members .login-button:hover,
+#admin .login-button:hover,
+#waiter .login-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Ensuring responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .role {
+        margin: 10px 0;
+        width: 90%;
+    }
+}

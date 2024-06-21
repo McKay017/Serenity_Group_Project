@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity</title>
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class="landingpage">
+        <div class="topbar">
+            <div class="logo">
+                <img src="{% static 'images/logo.png' %}" alt="logo" class="lgo">
+                <p class="sere">Serenity</p>
+            </div>
+            <div class="menu-container">
+                <button id="menu-button">
+                    <img src="{% static 'images/menu.png' %}" alt="Menu">
+                </button>
+                <div id="menu" class="menu">
+                    <ul>
+                        <li><a href="{% url 'landing_page' %}">Home</a></li>
+                        <li><a href="{% url 'landing_page' %}">About</a></li>
+                        <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                        <li><a href="{% url 'landing_page' %}">Services</a></li>
+                        <li><a href="{% url 'landing_page' %}">Contact</a></li>
+                        <li><a href="{% url 'logins' %}">Login's</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="h">
+        <h1>Gallery</h1>
+    </div>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 8">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 9">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 10">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 11">
+        </div>
+        <div class="gallery-item">
+            <img src="{% static 'images/2meal.jpg' %}" alt="Gallery Image 12">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="copy">
+            <p>Copyright@2024</p>
+        </div>
+        <div class="privacy">
+            <p>Privacy Policy 2024</p>
+        </div>
+    </div>
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>

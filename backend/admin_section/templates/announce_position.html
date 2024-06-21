@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Announce Position</title>
+</head>
+<body>
+    <h2>Announce Position</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label for="title">Title:</label>
+        <input type="text" name="title" required><br>
+        <label for="description">Description:</label>
+        <textarea name="description" required></textarea><br>
+        <label for="start_vying">Start Vying:</label>
+        <input type="datetime-local" name="start_vying" required><br>
+        <label for="end_vying">End Vying:</label>
+        <input type="datetime-local" name="end_vying" required><br>
+        <label for="start_voting">Start Voting:</label>
+        <input type="datetime-local" name="start_voting" required><br>
+        <label for="end_voting">End Voting:</label>
+        <input type="datetime-local" name="end_voting" required><br>
+        <button type="submit">Announce</button>
+    </form>
+</body>
+</html>

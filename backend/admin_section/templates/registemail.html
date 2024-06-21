@@ -1,0 +1,41 @@
+<!-- registration_email.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submission Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Serenity Country Club </h2>
+        <p>Dear To be Member,</p>
+        <p>Congratulations! Your request has been accepted. Please follow the link below to complete your registration:</p>
+        <p><a href="{{ registration_link }}">{{ registration_link }}</a></p>
+        <p>Regards,<br>Serenity</p>
+    </div>
+</body>
+</html>

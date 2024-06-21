@@ -1,0 +1,36 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/adminlogin.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <title>Member login</title>
+</head>
+<body>
+    <div class="adminlogin">
+        <div class="page1">
+            <img src="{% static 'images/bty.jpg' %}" alt="adminprof" class="admin_prof" id="admin_prof">
+            <p class="were">Serenity</p>
+            <p class="were1">Country</p>
+            <p class="were2">Club</p>
+        </div>
+        <div class="page2">
+            <div class="titleadmin">
+                <h1>Member Login</h1>
+            </div>
+            <form method="post">
+                {% csrf_token %} {{ form.as_p }}  <div class="submit"><button class="lgin" type="submit">Login</button></div>
+            </form>
+            {% if form.errors %}  <ul>
+                    {% for error in form.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

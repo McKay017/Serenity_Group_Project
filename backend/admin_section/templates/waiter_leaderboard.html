@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/leaderboard.css' %}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <p>Dashboard</p>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/leader.png' %}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <p>Leaderboard</p>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/order.png' %}" alt="room_reservation" class="room_reservation_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <p class="ord">Order</p>
+                </div>
+            </div>
+
+            
+            <hr class="hr1">
+            <div class="profile">
+                <p>Profile</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <p>Profile</p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <p>Logout</p>
+                </div>
+            </div>
+        </div>
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi , {{request.user}} </h3>
+                
+            </div>
+            <div class="allmedia">
+                <div class="container">
+                    <h1>LeaderBoard </h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Waiter ID</th>
+                                <th>Waiter Name</th>
+                                <th>Number of Stars Achieved</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>W001</td>
+                                <td>John Doe</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>W002</td>
+                                <td>Jane Smith</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>W003</td>
+                                <td>Emily Johnson</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>W004</td>
+                                <td>Michael Brown</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>W005</td>
+                                <td>Sarah Davis</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

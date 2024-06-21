@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+    <title>Proposed Requests</title>
+    <style>
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .actions {
+            margin-top: 10px;
+        }
+        .actions a {
+            text-decoration: none;
+            margin-right: 10px;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .actions a:hover {
+            background-color: #ddd;
+        }
+        .container{
+            background-color: white;
+            color: white;
+            height: 700px;
+            padding-left: 5%;
+            padding-right: 5%;
+            overflow: auto;
+            margin-top: .6%;
+        }
+        li{
+            background-color: black;
+        }
+        h2{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'member_home' %}"><p>Dashboard</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/dine.png'%}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <a href="{% url 'dine' %}"><p>Dine</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/room.png' %}" alt="room_reservation" class="dashboard_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'room' %}"><p>Room</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/refer.png' %}" alt="receipt" class="dine_im" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'user_form_wizard' %}"><p>Refer</p></a>
+                </div>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/noti.png' %}" alt="receipt" class="dine_im" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'display_requests' request.user %}"><p>Notifications</p></a>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="profile">
+                <p>Profile</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <p>Profile</p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png'%}" alt="receipt" class="dine_im" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'member_logout' %}"><p>Logout</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi , {{request.user}} </h3>
+                <div class="welcome">
+                    <div class="wlc">
+                        <h2>Welcome back</h2>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="container">
+                <h2>Proposed Requests for User ID: {{ userid }}</h2>
+                <ul>
+                    {% for request in proposed_requests %}
+                    <li>
+                        <p><strong>Proposed Email:</strong> {{ request.proposed_email }}</p>
+                        <p><strong>Name:</strong> {{ request.name }}</p>
+                        <p><strong>Occupation:</strong> {{ request.occupation }}</p>
+                        <p><strong>Employer:</strong> {{ request.employer }}</p>
+                        <p><strong>Phone Number:</strong> {{ request.phone_number }}</p>
+                        <p><strong>Relationship Status:</strong> {{ request.relationship_status }}</p>
+                        <div class="actions">
+                            <a href="{% url 'handle_notification' request.id 'accept' %}">Accept</a>
+                            <a href="{% url 'handle_notification' request.id 'decline' %}">Decline</a>
+                        </div>
+                    </li>
+                    {% empty %}
+                    <li>No proposed requests found.</li>
+                    {% endfor %}
+                </ul>
+                
+    
+            </div>
+            
+            <div class="footer">
+                <div class="copy">
+                    <p>Copyrights@2024</p>
+                </div>
+                <div class="policy">
+                    <p>Privacy policy 2024</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

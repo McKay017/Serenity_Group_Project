@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        @import url(https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script); 
+
+@font-face {
+    font-family: "Clicker Script";
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot");
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.svg#Clicker Script")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/21d1ef740083511bfa90bcc92c819293?family=Poppins+Thin); 
+
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/92c6ef0497cd59fd2a730425f318f504?family=Street+Corner+SemiBold); 
+
+@font-face {
+    font-family: "Street Corner SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot");
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.svg#Street Corner SemiBold")format("svg");
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            margin-top: 15%;
+            width: 590px;
+            background-color: #ffffff;
+            padding: 10px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 2%;
+        }
+        form p {
+            margin-bottom: 15px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+        .errorlist {
+            color: red;
+            margin-bottom: 10px;
+        }
+        .container h1{
+            font-family: "Street Corner SemiBold";
+        }
+        .container h2{
+            font-family: "Street Corner SemiBold";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Serenity Country Club</h1>
+        <h2>Member Registration</h2>
+        <h2>User Registration</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.non_field_errors }}
+            </div>
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small style="color: #888;">{{ field.help_text }}</small>
+                    {% endif %}
+                    <div class="errorlist">{{ field.errors }}</div>
+                </div>
+            {% endfor %}
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

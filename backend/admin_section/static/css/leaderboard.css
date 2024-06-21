@@ -1,0 +1,525 @@
+@import url(https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script); 
+
+@font-face {
+    font-family: "Clicker Script";
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot");
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.svg#Clicker Script")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/21d1ef740083511bfa90bcc92c819293?family=Poppins+Thin); 
+
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/92c6ef0497cd59fd2a730425f318f504?family=Street+Corner+SemiBold); 
+
+@font-face {
+    font-family: "Street Corner SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot");
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.svg#Street Corner SemiBold")format("svg");
+}
+
+body,*{
+    margin: 0;
+    padding: 0;
+}
+.dashboard{
+    height: 100vh;
+    background-color: white;
+    width: 100vw;
+    display: flex;
+}
+.side_nav{
+    background-color: rgb(51, 57, 114);
+    width: 11.5%;
+    height: 100vh;
+    box-shadow: 1px 1px 5px black;
+}
+.logo{
+    display: flex;
+    margin-top: 8.5%;
+    padding-left: 18%;
+}
+.logo_title p{
+    padding-top: 9%;
+    font-family: "Clicker Script";
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+.menu{
+    color: white;
+    margin-top: 18.5%;
+    font-family: "Poppins Thin";
+    padding-left: 21%;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+.home{
+    
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 15%;
+    padding-left: 19%;
+}
+.home_title p{
+    padding-left: 15%;
+    font-family: "Street Corner SemiBold";
+    padding-top: 3.5%;
+    color: aliceblue;
+}
+.dine_img{
+    width: fit-content;
+    height: 40%;
+}
+.dine_img img{
+    height: 40%;
+}
+.dine_title p{
+    color: aliceblue;
+    font-family: "Street Corner SemiBold";
+    padding-left: 13%;
+    padding-top: 5.5%;
+}
+.receipt_title p{
+    padding-left: 30%;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    padding-top: 5%;
+
+}
+.hr1{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+}
+.profile p{
+    color: white;
+    padding-top: 10%;
+    padding-left: 23%;
+    font-family: "Poppins Thin";
+    font-size: 18px;
+    letter-spacing: 1.4px;
+}
+.hr2{
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+}
+.profile_title p{
+    padding-left: 25%;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    padding-top: 8%;
+}
+.the_rest{
+    width: 88.5%;
+}
+.topbar{
+    width: 100%;
+    border-bottom: 1px black dotted;
+}
+.topbar h3{
+    font-family: "Street Corner SemiBold";
+    padding-left: 2.5%;
+    padding-top: 1.5%;
+    font-size: 40px;
+    font-weight: 100;
+}
+.topbar h2{
+    font-family: "Street Corner SemiBold";
+    padding-left: 2.5%;
+    font-size: 70px;
+    font-weight: 100;
+    padding-bottom: .2%;
+}
+.media{
+    display: flex;
+    background-color: rgb(51, 57, 114);
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 3%;
+    border-radius: 33px;
+    margin-right: 3%;
+    color: white;
+    box-shadow: 0 2px 2px black;
+    width: 65%;
+    margin-bottom: 3%;
+    padding-top: 5%;
+}
+.media_description{
+    width: 50%;
+    padding-top: 6%;
+    padding-left: 5%;
+    padding-bottom: 2%;
+}
+.media_description h1{
+    font-family: "Clicker Script";
+    font-size: 130px;
+}
+.media_description p{
+    font-size: 25px;
+    font-family: "Street Corner SemiBold";
+}
+.get_started{
+    padding: 2.3%;
+    margin-top: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    font-size: 20px;
+    border-radius: 22px;
+    border: none;
+    background-color: orangered;
+    color: aliceblue;
+    box-shadow: 1px 1px 1px white;
+    font-family: "Street Corner SemiBold";
+}
+.calen{
+    font-family: "Street Corner SemiBold";
+    margin-top: 1.85%;
+    border-radius: 22px;
+    margin-bottom: 3%;
+}
+.allmedia{
+    display: flex;
+    height: 700px;
+}
+.welcome{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    padding-left: 1.2%;
+}
+.wlc{
+    width: 50%;
+}
+.joined{
+    width: 40%;
+}
+.joined p{
+    padding-top: 8.5%;
+    padding-left: 40%;
+    font-family: "Street Corner SemiBold";
+}
+.data1{
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 190px;
+    padding: 32%;
+}
+.container1{
+    background-color: grey;
+    width: 18%;
+    height: 115%;
+    padding: 2%;
+    text-align: center;
+    border-radius: 22px;
+}
+.contaners{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#con1{
+    background-color: #8AC7DB;
+    opacity: .8;
+    box-shadow: 2px 10px 10px #000;
+    border: 2px solid #8AC7DB;
+}
+#con1 h1{
+    font-size: 90px;
+    font-family: "Street Corner SemiBold";
+}
+#con1 p{
+    font-size: 30px;
+    letter-spacing: 1.4px;
+    font-family: "Street Corner SemiBold";
+}
+#con2 h1{
+    font-size: 65px;
+    font-family: "Street Corner SemiBold";
+}
+#con2 p{
+    font-size: 30px;
+    padding-top: 9%;
+    letter-spacing: 1.4px;
+    font-family: "Street Corner SemiBold";
+}
+#con2{
+    background-color: #F75D59;
+    opacity: 0.8;
+    border: 2px solid #F75D59;
+    box-shadow: 2px 10px 10px black;
+}
+
+#con3 h1{
+    font-size: 65px;
+    font-family: "Street Corner SemiBold";
+}
+#con3 p{
+    font-size: 30px;
+    padding-top: 9%;
+    letter-spacing: 1.4px;
+    font-family: "Street Corner SemiBold";
+}
+#con3{
+    background-color: #AFE1AF;
+    opacity: 0.8;
+    border: 2px solid #AFE1AF;
+    box-shadow: 2px 10px 10px black;
+}
+
+.view{
+    padding: 2%;
+    font-size: 20px;
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 22px;
+    border: none;
+    background-color: rgb(4, 30, 39);
+    color: white;
+    box-shadow: 1px 1px 1px white;
+    font-family: "Street Corner SemiBold";
+    letter-spacing: 1.4px;
+}
+.viewp{
+    padding: 2%;
+    font-size: 20px;
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 22px;
+    border: none;
+    background-color: rgb(212, 14, 14);
+    color: white;
+    box-shadow: 1px 1px 1px white;
+    font-family: "Street Corner SemiBold";
+    letter-spacing: 1.4px;
+}
+.viewg{
+    padding: 2%;
+    font-size: 20px;
+    margin-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 22px;
+    border: none;
+    background-color: rgb(6, 129, 6);
+    color: white;
+    box-shadow: 1px 1px 1px white;
+    font-family: "Street Corner SemiBold";
+    letter-spacing: 1.4px;
+}
+.footer{
+    font-size: 13px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.6%;
+    font-family: "Street Corner SemiBold";
+}
+
+
+.calen{
+    background-color: rgb(51, 57, 114);
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#current-time {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#current-month {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.days-of-week {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.days-of-week div {
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#calendar-dates {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#calendar-dates div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#calendar-dates div.empty {
+    background-color: rgb(51, 57, 114);
+}
+
+#calendar-dates div:not(.empty) {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#calendar-dates div:hover {
+    background-color: #5c2c2c;
+}
+
+#calendar-dates div.current-day {
+    background-color: #007bff;
+    color: white;
+}
+
+.ord{
+    margin-left: 2%;
+}
+.calen{
+    margin-top: 10%;
+    margin-bottom: 12%;
+}
+.topbar h3{
+    padding-bottom: 1.5%;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    padding-top: 4%;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 50px;
+    font-weight: 200;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(51, 57, 114);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #555;
+}
+.menu_ruler{
+    margin-top: 2%;
+    border: 1px dotted black;
+    margin-left: 4%;
+    margin-right: 4%;
+}
+.food_heading h2{
+    font-family: "Street Corner SemiBold";
+    padding-top: 1.5%;
+    padding-left: 15%;
+}
+.conts{
+    display: flex;
+}
+.ingredients{
+    width: 50%;
+}
+.ingredients p{
+    font-family: "Street Corner SemiBold";
+    padding-left: 30%;
+}
+.orderp{
+    width: 50%;
+}
+
+.orderp{
+    display: flex;
+}
+.price p{
+    font-size: 15px;
+    padding-left: 15%;
+    font-family: "Street Corner SemiBold";
+}
+
+.price{
+    padding-left: 30%;
+    width: 20%;
+}
+.ord{
+    border-radius: 11px;
+    padding: 12%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    box-shadow: 1px 1px 1px black;
+    padding-top: -200px;
+}
+.the_rest{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: white;
+}
+.apph1{
+    text-align: center;
+}
+.fm{
+    padding-left: 5%;
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positions List</title>
+</head>
+<body>
+    <h2>Available Positions</h2>
+    <ul>
+        {% for position in positions %}
+            <li>
+                <strong>{{ position.title }}</strong><br>
+                {{ position.description }}<br>
+                <a href="{% url 'vie_for_position' position.id %}">Vie for this position</a> |
+                <a href="{% url 'vote' position.id %}">Vote</a> |
+                <a href="{% url 'results' %}">View Results</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

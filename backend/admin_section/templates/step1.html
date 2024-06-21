@@ -1,0 +1,185 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/calendar.css' %}">
+    <title>Step 1 - Proposed Email</title>
+    <style>
+       
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 5%;
+            border-radius: 22px;
+            height: 300px;
+            padding-left: 2%;
+            padding-right: 2%;
+            padding-top: 5%;
+            margin-bottom: 15%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            padding-top: 12%;
+            padding-bottom: 12%;
+            font-size: 30px;
+        }
+        input[type="email"], button[type="submit"] {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'member_home' %}"><p>Dashboard</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/dine.png'%}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <a href="{% url 'dine' %}"><p>Dine</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/room.png' %}" alt="room_reservation" class="dashboard_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'room' %}"><p>Room</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/refer.png' %}" alt="receipt" class="dine_im" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'user_form_wizard' %}"><p>Refer</p></a>
+                </div>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/noti.png' %}" alt="receipt" class="dine_im" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'display_requests' request.user %}"><p>Notifications</p></a>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="profile">
+                <p>Profile</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <p>Profile</p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png'%}" alt="receipt" class="dine_im" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'member_logout' %}"><p>Logout</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi , {{request.user}} </h3>
+                <div class="welcome">
+                    <div class="wlc">
+                        <h2>Welcome back</h2>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="container">
+                <h2>Step 1: Proposed Email</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ wizard.management_form }}
+                    <div class="form-group">
+                        {{ wizard.form.as_p }}
+                    </div>
+                    <button type="submit">Next</button>
+                </form>
+            </div>
+            
+            <div class="footer">
+                <div class="copy">
+                    <p>Copyrights@2024</p>
+                </div>
+                <div class="policy">
+                    <p>Privacy policy 2024</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

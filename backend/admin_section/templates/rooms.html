@@ -1,0 +1,151 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/rooms.css'%}">
+    <title>Rooms</title>
+    <style>
+        .roominage{
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'member_home' %}"><p>Dashboard</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/dine.png'%}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <a href="{% url 'dine' %}"><p>Dine</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/room.png' %}" alt="room_reservation" class="dashboard_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'room' %}"><p>Room</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/refer.png' %}" alt="receipt" class="dine_im" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'user_form_wizard' %}"><p>Refer</p></a>
+                </div>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/noti.png' %}" alt="receipt" class="dine_im" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'display_requests' request.user %}"><p>Notifications</p></a>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="profile">
+                <p>Profile</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <p>Profile</p>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png'%}" alt="receipt" class="dine_im" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'member_logout' %}"><p>Logout</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="the_rest">
+            <div class="username">
+            
+                <h1>Hi , {{ request.user }}</h1>
+            
+        </div>
+            <div class="top_menu_image">
+                <div class="log_img">
+                    <img src="{% static 'images/room.jpg' %}" alt="" class="menulogos">
+                </div>
+                <div class="log_titl">
+                    <h3>ROOM</h3>
+                </div>
+            </div>
+            <div class="room_items">
+                <p>
+                    3 BEDROOM |
+                    2 BEDROOM |
+                    1 BEDROOM | 
+                    STUDIO 
+                </p>
+            </div>
+            <div class="appetizers">
+                <div class="apph1">
+                    <h1>ROOMS</h1>
+                </div>
+                <hr class="menu_ruler">
+                <div class="menu_food_list">
+                    <div class="food_heading">
+                        {% for room in rooms %}
+                        <div class="conts">
+                            <div class="ingredients">
+                                <img src="{{ room.image.url }}" alt="" class="roominage">
+                                <p>Room name: {{ room.room_name }}</p>
+                                <p>Room type: {{ room.room_type }}</p>
+                                <p>Room price: {{ room.price }}</p>
+                                <div class="orderp">
+                                    <div class="order">
+                                        <a href="{% url 'room_detail' room.id %}" class="ord">Book</a>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <hr class="menu_ruler">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

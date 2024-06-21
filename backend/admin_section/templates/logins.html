@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Roles</title>
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/logins.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Logins</h1>
+    </header>
+    <div class="container">
+        
+        <div class="role" id="members">
+            <h2>Members</h2>
+            <p>Access exclusive club facilities and services tailored for members.</p>
+            <a href="{% url 'CustomLoginView' %}">
+            <button class="login-button">Login</button>
+            </a>
+        </div>
+        <div class="role" id="admin">
+            <h2>Admin</h2>
+            <p>Manage club operations, member details, and oversee overall administration.</p>
+            <a href="{% url 'login_page' %}">
+            <button class="login-button">Login</button>
+            </a>
+        </div>
+        <div class="role" id="waiter">
+            <h2>Waiter</h2>
+            <p>Provide excellent service to members, ensuring a high-quality dining experience.</p>
+            <a href="{% url 'waiter_login' %}">
+                <button class="login-button">Login</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

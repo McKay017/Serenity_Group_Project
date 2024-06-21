@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/membersadmin.css' %}">
+
+    <title>Admin slideshow</title>
+    <style>
+     
+        .container {
+            background-color: gray;
+            padding: 20px 40px;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-left: 5%;
+            margin-right: 15%;
+            margin-top: 5%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 15px;
+            color: green;
+        }
+        .errorlist {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'home' %}"><p>Dashboard</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/dine.png' %}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <a href="{% url 'addfoodmenu' %}"><p>Menu</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/room.png' %}" alt="room_reservation" class="room_reservation_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'addroomadmin' %}"><p>Rooms</p></a>
+
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/websit.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'landingpage' %}"><p>Website</p></a>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="profile">
+                <p>Records</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <a href="{% url 'adminmemberspage' %}"><p>Members</p></a>
+                </div>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <a href="{% url 'adminwaiterspage' %}"><p>Waiters</p></a>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="homel">
+                <div class="home_img">
+                    <img src="{% static 'images/logout.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'member_logout' %}">
+                        <p>Logout</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="app">
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi, {{request.user}} </h3>  
+            </div>
+            <div class="therest">
+                <h1>Members</h1>
+            </div>
+        </div>
+        <div class="men">
+            <div class="startt">
+                <div class="imgt">
+                    <img src="{% static 'images/add.png' %}" alt="add">
+                </div>
+                <div class="text_acc">
+                    <a href="{% url 'send_registration_link' %}"><p>Refer member</p></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container">
+            <h2>Send Registration Link</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.email }}
+                <input type="submit" value="Send Link">
+            </form>
+            {% if messages %}
+                <div class="message">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        
+        
+        
+    </div>
+   
+   
+    </div>
+</body>
+</html>

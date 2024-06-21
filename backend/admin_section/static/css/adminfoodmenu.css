@@ -1,0 +1,429 @@
+@import url(https://db.onlinewebfonts.com/c/b5cae760e3ebeb67aed58508b5ae4269?family=Clicker+Script); 
+
+@font-face {
+    font-family: "Clicker Script";
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot");
+    src: url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b5cae760e3ebeb67aed58508b5ae4269.svg#Clicker Script")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/21d1ef740083511bfa90bcc92c819293?family=Poppins+Thin); 
+
+@font-face {
+    font-family: "Poppins Thin";
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot");
+    src: url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/21d1ef740083511bfa90bcc92c819293.svg#Poppins Thin")format("svg");
+}
+
+@import url(https://db.onlinewebfonts.com/c/92c6ef0497cd59fd2a730425f318f504?family=Street+Corner+SemiBold); 
+
+@font-face {
+    font-family: "Street Corner SemiBold";
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot");
+    src: url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/92c6ef0497cd59fd2a730425f318f504.svg#Street Corner SemiBold")format("svg");
+}
+
+body,*{
+    margin: 0;
+    padding: 0;
+}
+.dashboard{
+    height: 100vh;
+    background-color: white;
+    width: 100vw;
+    display: flex;
+}
+.side_nav{
+    background-color: gray;
+    width: 11.5%;
+    height: 100vh;
+    box-shadow: 1px 1px 5px black;
+}
+.logo{
+    display: flex;
+    margin-top: 8.5%;
+    padding-left: 18%;
+}
+.logo_title p{
+    padding-top: 9%;
+    font-family: "Clicker Script";
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+}
+.menu{
+    color: white;
+    margin-top: 18.5%;
+    font-family: "Poppins Thin";
+    padding-left: 21%;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+}
+.home{  
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 15%;
+    padding-left: 19%;
+}
+.homel{  
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 15%;
+    padding-left: 19%;
+    
+}
+.homel:hover{
+    background-color: red;
+    border-right: 2px solid white;
+}
+.home_title p{
+    padding-left: 13%;
+    font-family: "Street Corner SemiBold";
+    padding-top: 3.5%;
+    color: aliceblue;
+}
+.dine_img{
+    width: fit-content;
+    height: 40%;
+}
+.dine_img img{
+    height: 40%;
+}
+.dine_title p{
+    color: aliceblue;
+    font-family: "Street Corner SemiBold";
+    padding-left: 30%;
+    padding-top: 7.5%;
+}
+.receipt_title p{
+    padding-left: 30%;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    padding-top: 5%;
+
+}
+.hr1{
+    margin-top: 18%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+}
+.profile p{
+    color: white;
+    padding-top: 10%;
+    padding-left: 23%;
+    font-family: "Poppins Thin";
+    font-size: 18px;
+    letter-spacing: 1.4px;
+}
+.hr2{
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: aliceblue;
+}
+.profile_title p{
+    padding-left: 25%;
+    color: white;
+    font-family: "Street Corner SemiBold";
+    padding-top: 8%;
+}
+.tms{
+    margin-left: 13%;
+}
+
+
+.the_rest{
+    width: 100%;
+}
+.topbar{
+    width: 100%;
+    border-bottom: 1px black dotted;
+}
+.topbar h3{
+    font-family: "Street Corner SemiBold";
+    padding-left: 2.5%;
+    padding-top: 1.5%;
+    font-size: 40px;
+    font-weight: 100;
+    padding-bottom: 1%;
+}
+.topbar h2{
+    font-family: "Street Corner SemiBold";
+    padding-left: 2.5%;
+    font-size: 70px;
+    font-weight: 100;
+    padding-bottom: .2%;
+}
+.admin_food_menu{
+    height: 370px;
+    width: 400px;
+    padding-left: 30%;
+    padding-top: 2%;
+    margin-top: 2%;
+    background-color: grey;
+    margin-left: 3%;
+    border-radius: 33px;
+    padding-right: 35%;
+}
+
+.app{
+    width: 100%;
+}
+.men{
+    background-color: gray;
+    color: white;
+    display: flex;
+    margin-top: 1%;
+    justify-content: space-around;
+    padding-left: 60%;
+    padding-right: 10%;
+    padding-top: .3%;
+    padding-bottom: .3%;
+}
+.startt{
+    display: flex;
+    background-color: #45a049;
+    border-radius: 33px;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 2%;
+}
+.therest h1{
+    padding-left: 2.5%;
+    font-size: 50px;
+    font-weight: 100;
+}
+.titlee{
+    border-bottom: 2px dotted black;
+}
+.titlee h1{
+    padding-left: 3%;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.categoryta{
+    display: flex;
+    padding-left: 1%;
+    padding-top: .4%;
+    margin-left: 3.25%;
+    justify-content: space-between;
+    padding-right: 25%;
+}
+.category_buttons{
+    width: 30%;
+    justify-content: space-around;
+}
+.category_buttons button{
+    padding: 3%;
+    margin-top: 2%;
+    border-radius: 22px;
+    border: none;
+    font-size: 25px;
+}
+
+table {
+    width: 85%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 3.5%;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.category_name{
+    font-size: 40px;
+}
+.edit{
+    background-color: #45a049;
+    color: #fff;
+}
+.delete{
+    background-color: red;
+    color: #fff;
+}
+.buttond{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: red;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.footer,.foter{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+.foter{
+    margin-top: 15%;
+}
+.form_inoput,.form_inout{
+    margin-top: 1.5%;
+    background-color: gray;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 3.2%;
+    padding-left: 5.2%;
+    border-radius: 22px;
+    padding-bottom: 1.2%;
+}
+ input{
+    width: 70%;
+    height: 40px;
+    border-radius: 22px;
+    padding-left: 2%;
+    border: none;
+    margin-bottom: 4%;
+    margin-top: 1%;
+ }
+ label{
+    font-size: 30px;
+    padding-bottom: 2%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 15%;
+ }
+
+.inputform h1{
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.sub{
+    padding: 1.2%;
+    font-size: 20px;
+    border-radius: 22px;
+    border: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 25%;
+    background-color: #45a049;
+    color: white;
+}
+.form_inoput{
+    margin-bottom: 7.5%;
+    color: #f1f1f1;
+}
+.form_inout{
+    margin-bottom: 1.5%;
+    color: #f1f1f1;
+}
+textarea{
+    width: 550px;
+    height: 100px;
+    border-radius: 22px;
+    padding-left: 2.5%;
+    padding-top: 2%;
+}
+.meal2{
+    width: 30px;
+    padding-left: 30%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.menu_items_record{
+    background-color: grey;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 22px;
+}
+
+.menu_items_record {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu_items_record form {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_items_record form p {
+    margin: 0 0 10px;
+}
+input{
+    width: 65%;
+}
+
+.menu_items_record .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 65%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu_items_record .btn:hover {
+    background-color: #45a049;
+}
+

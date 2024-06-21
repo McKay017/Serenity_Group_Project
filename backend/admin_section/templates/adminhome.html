@@ -1,0 +1,178 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/adminstyles.css' %}">
+
+    <title>Admin</title>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="side_nav">
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="{% static 'images/logo.png' %}" alt="" class="logoimg">
+                </div>
+                <div class="logo_title">
+                    <p>Serenity</p>
+                </div>
+            </div>
+            <div class="menu">
+                <p>Menu</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/dash_white.png' %}" alt="dashboard" class="dashboard_img" id="dashboard_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'home' %}"><p>Dashboard</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="dine_img">
+                    <img src="{% static 'images/dine.png' %}" alt="dine" class="dine_im" id="dine_img">
+                </div>
+                <div class="dine_title">
+                    <a href="{% url 'addfoodmenu' %}"><p>Menu</p></a>
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/room.png' %}" alt="room_reservation" class="room_reservation_img" id="room_reservation_img">
+                </div>
+                <div class="home_title">
+                    <a href="{% url 'addroomadmin' %}"><p>Rooms</p></a>
+
+                </div>
+            </div>
+
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/websit.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                </div>
+                <div class="receipt_title">
+                    <a href="{% url 'landingpage' %}"><p>Website</p></a>
+                </div>
+            </div>
+            <hr class="hr1">
+            <div class="profile">
+                <p>Records</p>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <a href="{% url 'adminmemberspage' %}"><p>Members</p></a>
+                </div>
+            </div>
+            <div class="home">
+                <div class="home_img">
+                    <img src="{% static 'images/user.png' %}" alt="user_profile" class="user_profile_img" id="user_profile_img">
+                </div>
+                <div class="profile_title">
+                    <a href="{% url 'adminwaiterspage' %}"><p>Waiters</p></a>
+                </div>
+            </div>
+            <hr class="hr2">
+            <div class="profile">
+                <p>Logout</p>
+            </div>
+            <div class="homel">
+                    <div class="home_img">
+                        <img src="{% static 'images/logout.png' %}" alt="receipt" class="receipt_img" id="receipt_img">
+                    </div>
+                    <div class="receipt_title">
+                        <a href="{% url 'member_logout' %}">
+                            <p>Logout</p></a>
+                    </div>
+                
+            </div>
+        </div>
+        <div class="the_rest">
+            <div class="topbar">
+                <h3>Hi, {{request.user}} </h3>
+                <div class="welcome">
+                    <div class="wlc">
+                        <h2>Welcome back</h2>
+                    </div>
+                    <div class="joined">
+                        <p>Joined since {{date_joined}}</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="allmedia">
+                <div class="media">
+                    <div class="media_description">
+                        <h1>Serenity</h1>
+                        <p>Get the best facilities and amenities today!</p>
+                        <button class="get_started">Get started</button>
+                    </div>
+                    <div class="media_image">
+                        <img src="{% static 'images/cherry-golfer.png' %}" alt="golfer" class="golfing" id="golfing">
+                    </div>
+                </div>
+                <div class="calen">
+                    <div class="calendar-header">
+                        <div id="current-time"></div>
+                        <div id="current-month"></div>
+                    </div>
+                    <div class="calendar-body">
+                        <div class="days-of-week">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div id="calendar-dates"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="contaners">
+                <div class="container1" id="con1">
+                    <h1 class="data2">{{members_count}}</h1>
+                    <div class="con123">
+                        <p class="mem">Members</p>
+                        <button class="view">View</button>
+                    </div>
+                </div>
+                <div class="container1" id="con2">
+                    <h1 class="data2">{{waiters_count}}</h1>
+                    <div class="con123">
+                        <p class="wat">Waiters</p>
+                        <button class="viewp">View</button>
+                    </div>
+                </div>
+                <div class="container1" id="con3">
+                    <h1 class="data2">{{food}}</h1>
+                    <div class="con123">
+                        <p>Menu Items</p>
+                        <button  class="viewg">View</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="copy">
+                    <p>Copyrights@2024</p>
+                </div>
+                <div class="policy">
+                    <p>Privacy policy 2024</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+    
+</body>
+</html>
